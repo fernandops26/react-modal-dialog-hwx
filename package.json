@@ -1,10 +1,10 @@
 {
-  "name": "react-modal-dialog",
-  "version": "4.0.6",
+  "name": "react-modal-dialog-hwx",
+  "version": "2.0.0",
   "description": "A simple, idiomatic, and declarative way to launch modal dialogs in ReactJS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qimingweng/react-modal-dialog"
+    "url": "https://github.com/ghsteam/react-modal-dialog-hwx"
   },
   "main": "lib/index.js",
   "edusightMain": "src/index.js",
@@ -14,7 +14,7 @@
     "github": "./scripts/publishStaticSite.sh",
     "build": "babel src --out-dir lib --stage 0"
   },
-  "author": "Qiming Weng",
+  "author": "Qiming Weng + modifiers",
   "license": "MIT",
   "dependencies": {
     "active-event-stack": "^1.0.0",
