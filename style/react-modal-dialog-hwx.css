@@ -1,0 +1,84 @@
+.React_Modal_Dialog-dialog {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: auto;
+}
+
+.React_Modal_Dialog-background-overlay, .React_Modal_Dialog-background-container {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    cursor: pointer;
+    position: absolute;
+}
+
+.React_Modal_Dialog-background-overlay {
+    opacity: 0.85;
+    background-color: #182738;
+}
+
+.React_Modal_Dialog-background-container {
+    opacity: 1;
+    overflow-y: auto;
+}
+
+.React_Modal_Dialog-background-overlay--transparent, .React_Modal_Dialog-background-container--transparent {
+    opacity: 0;
+}
+
+.React_Modal_Dialog-background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.React_Modal_Dialog-Flex_Dialog-wrapper {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.React_Modal_Dialog-Flex_Dialog-subwrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.React_Modal_Dialog-Flex_Dialog-content {
+    display: block;
+    background-color: white;
+    position: relative;
+}
+
+.React_Modal_Dialog-Flex_Dialog-button--close {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.1s;
+    /*background-image: require('../images/modal-dialog-close.png');
+    background-repeat: no-repeat;
+    background-size: 40px 40px;*/
+}
+
+.React_Modal_Dialog-Flex_Dialog--close:hover {
+    transform: scale(1.1);
+}

@@ -18,7 +18,7 @@ export default class FlexDialog extends React.Component {
             },
         } = this;
 
-        const combinedClassName = 'React-Modal-Dialog--dialog ' + className
+        const combinedClassName = 'React_Modal_Dialog-dialog ' + className
 
         return <UnstyledFlexDialog className={combinedClassName} {...rest}/>;
     };

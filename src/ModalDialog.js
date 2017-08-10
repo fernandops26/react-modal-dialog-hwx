@@ -117,14 +117,14 @@ export default class ModalDialog extends React.Component {
       },
     } = this;
 
-    const modalClassName = 'React-Modal-Dialog--dialog' + className
+    const modalClassName = 'React_Modal_Dialog-dialog' + className
     return <div {...rest}
       ref="self"
-      className={combinedDivClassName}
+      className={modalClassName}
     >
       {
         onClose ?
-        <a className={'React-Modal-Dialog--button-close'} onClick={onClose}>
+        <a className={'React_Modal_Dialog-button--close'} onClick={onClose}>
           <CloseCircle diameter={40}/>
         </a> :
         null

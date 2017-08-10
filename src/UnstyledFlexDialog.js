@@ -7,10 +7,10 @@ import EventStack from 'active-event-stack';
 import keycode from 'keycode';
 
 const classNameStyles = {
-  wrapper: 'React-Modal-Dialog--wrapper',
-  subwrapper: 'React-Modal-Dialog--subwrapper',
-  buttonClose: 'React-Modal-Dialog--button-close',
-  content: 'React-Modal-Dialog--content'
+  wrapper: 'React_Modal_Dialog-Flex_Dialog-wrapper',
+  subwrapper: 'React_Modal_Dialog-Flex_Dialog-subwrapper',
+  buttonClose: 'React_Modal_Dialog-Flex_Dialog-button--close',
+  content: 'React_Modal_Dialog-Flex_Dialog-content'
 }
 
 export default class UnstyledFlexDialog extends React.Component {
