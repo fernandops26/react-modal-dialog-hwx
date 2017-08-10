@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const classNameStyles = {
-  overlay: 'RMD-Background--overlay',
-  container: 'RMD-Background--container'
+  overlay: 'React_Modal_Dialog-background-overlay',
+  container: 'React_Modal_Dialog-background-container',
+  wrapper: 'React_Modal_Dialog-background-wrapper'
 }
 
 export default class ModalBackground extends React.Component {
@@ -52,7 +53,7 @@ export default class ModalBackground extends React.Component {
       classNameStyles.container += '--transparent'
     }
 
-    return <div style={style}>
+    return <div className={classNameStyles.wrapper}>
       <div className={classNameStyles.overlay}/>
       <div className={classNameStyles.container}>{this.getChild()}</div>
     </div>;
