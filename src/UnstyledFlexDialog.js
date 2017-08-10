@@ -5,29 +5,19 @@ import dynamics from 'dynamics.js';
 import CloseCircle from './CloseCircle';
 import EventStack from 'active-event-stack';
 import keycode from 'keycode';
-import { inject } from 'narcissus';
 
-const styles = {
-  closeButton: {
-    position: 'absolute',
-    top: 0,
-    left: -50,
-    display: 'block',
-    width: 40,
-    height: 40,
-    transition: 'transform 0.1s',
-    '&&:hover': {
-      transform: 'scale(1.1)',
-    },
-  },
-};
+const classNameStyles = {
+  wrapper: 'React-Modal-Dialog--wrapper',
+  subwrapper: 'React-Modal-Dialog--subwrapper',
+  buttonClose: 'React-Modal-Dialog--button-close',
+  content: 'React-Modal-Dialog--content'
+}
 
 export default class UnstyledFlexDialog extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     componentIsLeaving: PropTypes.bool,
     onClose: PropTypes.func,
-    style: PropTypes.object,
   };
   componentWillMount = () => {
     /**
@@ -111,38 +101,20 @@ export default class UnstyledFlexDialog extends React.Component {
         children,
         componentIsLeaving, // eslint-disable-line no-unused-vars, this line is used to remove parameters from rest
         onClose,
-        style,
         ...rest,
       },
     } = this;
 
-    return <div
-      style={{
-        position: 'absolute',
-        display: 'flex',
-        width: '100%',
-        minHeight: '100%',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flexDirection: 'column',
-        overflowY: 'auto',
-      }}
-    >
-      <div style={{ display: 'flex', flexDirection: 'column', overflow: 'visible' }}>
+    return <div className={classNameStyles.wrapper}>
+      <div className={classNameStyles.subwrapper}>
         <div
           ref="self"
-          style={{
-            display: 'block',
-            backgroundColor: 'white',
-            // Position is important for the close circle
-            position: 'relative',
-            ...style,
-          }}
+          className={classNameStyles.content}
           {...rest}
         >
           {
             onClose != null &&
-            <a className={inject(styles.closeButton)} onClick={onClose}>
+            <a className={classNameStyles.buttonClose} onClick={onClose}>
               <CloseCircle diameter={40}/>
             </a>
           }
