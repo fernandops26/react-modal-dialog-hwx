@@ -125,7 +125,7 @@ export default class ModalDialog extends React.Component {
       {
         onClose ?
         <a className={'React_Modal_Dialog-button--close'} onClick={onClose}>
-          <CloseCircle diameter={40}/>
+          <CloseCircle/>
         </a> :
         null
       }

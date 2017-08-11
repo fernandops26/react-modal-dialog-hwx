@@ -74,11 +74,31 @@
     width: 40px;
     height: 40px;
     transition: transform 0.1s;
-    /*background-image: require('../images/modal-dialog-close.png');
-    background-repeat: no-repeat;
-    background-size: 40px 40px;*/
 }
 
 .React_Modal_Dialog-Flex_Dialog--close:hover {
     transform: scale(1.1);
+}
+
+.React_Modal_Dialog-close_circle {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.React_Modal_Dialog-close_circle-rectangle--left, .React_Modal_Dialog-close_circle-rectangle--right {
+    width: 22px;
+    height: 2px;
+    background:white;
+}
+.React_Modal_Dialog-close_circle-rectangle--left {
+    transform: rotate(45deg);
+}
+
+.React_Modal_Dialog-close_circle-rectangle--right {
+    transform: rotate(90deg);
 }
