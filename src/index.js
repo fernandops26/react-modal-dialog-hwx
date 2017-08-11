@@ -6,10 +6,10 @@ import ModalPortal from './ModalPortal';
 import UnstyledFlexDialog from './UnstyledFlexDialog';
 
 export {
-  FlexDialog,
-  ModalBackground,
-  ModalContainer,
-  ModalDialog,
-  ModalPortal,
-  UnstyledFlexDialog,
+    FlexDialog,
+    ModalBackground,
+    ModalContainer,
+    ModalDialog,
+    ModalPortal,
+    UnstyledFlexDialog,
 };
